@@ -4,4 +4,9 @@ html, body {
 
 .active {
   font-weight: bold;
+  font-family: helvetica;
+}
+
+li .active {
+  background-color: #c0c0c0;
 }
