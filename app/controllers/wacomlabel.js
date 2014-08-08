@@ -1,6 +1,7 @@
 var WacomlabelController = Ember.ObjectController.extend({
   fileInfo: function () {
     var newfiles = this.get('model.files');
+    newfiles = $.extend(true, [], newfiles)
     for (var i = 0; i < newfiles.length; i++) {
       var name = newfiles[i]['id'];
       //var array = name.split("/lernstift.data/");
@@ -11,7 +12,7 @@ var WacomlabelController = Ember.ObjectController.extend({
       //console.log(files[i]['date']);
     }
     return newfiles;
-  }.property('model.files')
+  }.property('model.files.@each')
 });
 
 export default WacomlabelController;
