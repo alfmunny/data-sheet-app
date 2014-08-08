@@ -2,7 +2,7 @@ var WriterController = Ember.ObjectController.extend({
   isBlended: false,
   isSorted: false,
   sortedContent: function () {
-      var labels=this.get('labels');
+      var labels = this.get('labels');
       var labelsController = Ember.ArrayController.create({
         content: labels,
         sortProperties: ['repeat'],

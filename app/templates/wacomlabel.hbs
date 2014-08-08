@@ -3,16 +3,8 @@
     <h3 class="panel-title" align="center">Files</h3>
   </div>
   <div class="panel-body">
-    {{#each fileInfo}}
-    <li class="list-group-item">
-      <span class="label label-success pull-right">
-        {{repeat}}
-      </span>
-      <span class="label label-info pull-right">
-        {{date}}
-      </span>
-      {{id}}
-    </li>
+    {{#each filesInfo}}
+    {{date-folder name=id repeat=repeat date=date}}
     {{/each}}
   </div>
 </div>
