@@ -2,6 +2,11 @@ html, body {
   margin: 20px;
 }
 
+#homepage {
+  border-style: groove;
+  background-color: #d4d3ce;
+}
+
 .active {
   font-weight: bold;
   font-family: helvetica;
@@ -9,4 +14,8 @@ html, body {
 
 li .active {
   background-color: #c0c0c0;
+}
+
+.pointer {
+  float: right;
 }

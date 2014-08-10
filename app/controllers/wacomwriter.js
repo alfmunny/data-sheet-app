@@ -1,3 +1,4 @@
 import WriterController from './writer';
 
-export default WriterController.extend();
+export default WriterController.extend({
+});
