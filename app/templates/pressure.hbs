@@ -1,18 +1,21 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3">
+    <div id="writer-list" class="col-md-3">
       <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title" align="center">Writers</h3>
         </div>
         <div class="panel-body">
-          <table class="table table-bordered table-hover">
-            <tbody>
-              {{#each}}
-              <tr id="writer"><td>{{#link-to 'pressurewriter' this}}{{id}}{{/link-to}}</td></tr>
-              {{/each}}
-            </tbody>
-          </table>
+          {{#view 'select-item'}}
+          {{#each}}
+              {{#link-to 'pressurewriter' this}}
+                <li class="list-group-item">
+                  {{id}}
+                  <span id="pointer"></span>
+                </li>
+              {{/link-to}}
+          {{/each}}
+          {{/view}}
         </div>
       </div>
     </div>

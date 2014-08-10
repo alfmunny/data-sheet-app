@@ -6,27 +6,33 @@
       </div>
       <div class="panel-body">
         {{#if 'isSorted'}}
-          {{#each sortedContent}}
-            {{#link-to 'pressurelabel' this}}
-              <li class="list-group-item">
-                {{id}}
-                <span class="label label-success pull-right">
-                  {{repeat}}
-                </span>
-              </li>
-            {{/link-to}}
-          {{/each}}
+          {{#view 'select-item'}}
+            {{#each sortedContent}}
+              {{#link-to 'pressurelabel' this}}
+                <li class="list-group-item">
+                  {{id}}
+                  <span id="pointer" class="pull-right"></span>
+                  <span class="label label-success pull-right">
+                    {{repeat}}
+                  </span>
+                </li>
+              {{/link-to}}
+            {{/each}}
+          {{/view}}
         {{else}}
-          {{#each labels}}
-            {{#link-to 'pressurelabel' this}}
-              <li class="list-group-item">
-                {{id}}
-                <span class="label label-success pull-right">
-                  {{repeat}}
-                </span>
-              </li>
-            {{/link-to}}
-          {{/each}}
+          {{#view 'select-item'}}
+            {{#each labels}}
+              {{#link-to 'pressurelabel' this}}
+                <li class="list-group-item">
+                  {{id}}
+                  <span id="pointer" class="pull-right"></span>
+                  <span class="label label-success pull-right">
+                    {{repeat}}
+                  </span>
+                </li>
+              {{/link-to}}
+            {{/each}}
+          {{/view}}
         {{/if}}
       </div>
     </div>

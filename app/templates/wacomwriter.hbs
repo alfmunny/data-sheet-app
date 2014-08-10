@@ -6,27 +6,33 @@
       </div>
       <div class="panel-body">
         {{#if 'isSorted'}}
+        {{#view 'select-item'}}
           {{#each sortedContent}}
             {{#link-to 'wacomlabel' this}}
               <li class="list-group-item">
                 {{id}}
+                <span id="pointer" class="pull-right"></span>
                 <span class="label label-success pull-right">
                   {{repeat}}
                 </span>
               </li>
             {{/link-to}}
           {{/each}}
+        {{/view}}
         {{else}}
+        {{#view 'select-item'}}
           {{#each labels}}
             {{#link-to 'wacomlabel' this}}
               <li class="list-group-item">
                 {{id}}
+                <span id="pointer" class="pull-right"></span>
                 <span class="label label-success pull-right">
                   {{repeat}}
                 </span>
               </li>
             {{/link-to}}
           {{/each}}
+        {{/view}}
         {{/if}}
       </div>
     </div>
