@@ -1,24 +1,49 @@
 <div class="container-fluid">
   <div class="row">
-    <div id="writer-list" class="col-md-3">
-      <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title" align="center">Writers</h3>
+    <div class="col-md-3">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" align="center">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse-writer-list">
+                Writers
+              </a>
+            </h3>
+          </div>
+          <div id="collapse-writer-list" class="panel-collapse collapse in">
+            <div class="panel-body">
+              {{#view 'select-item'}}
+                {{#each}}
+                    {{#link-to 'tabletwriter' this}}
+                      <li class="list-group-item">
+                        {{id}}
+                        <span id="pointer"></span>
+                      </li>
+                    {{/link-to}}
+                {{/each}}
+              {{/view}}
+            </div>
+          </div>
         </div>
-        <div class="panel-body">
-          {{#view 'select-item'}}
-          {{#each}}
-              {{#link-to 'tabletwriter' this}}
-                <li class="list-group-item">
-                  {{id}}
-                  <span id="pointer"></span>
-                </li>
-              {{/link-to}}
-          {{/each}}
-          {{/view}}
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            {{sort-labels isSorted=isSorted action="sort"}}
+            <h3 class="panel-title" align="center">
+              <a data-toggle="collapse" data-parent="#accordion" href="#collapse-label-list">
+                All Labels
+              </a>
+            </h3>
+          </div>
+          <div id="collapse-label-list" class="panel-collapse collapse">
+            <div class="panel-body">
+              {{all-labels isSorted=isSorted sortedContent=sortedContent allLetters=allLetters}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
+
     <div class="col-md-9">
       {{outlet}}
     </div>

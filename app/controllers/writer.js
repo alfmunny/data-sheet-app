@@ -1,5 +1,4 @@
 var WriterController = Ember.ObjectController.extend({
-  isBlended: false,
   isSorted: false,
   sortedContent: function () {
       var labels = this.get('labels');
