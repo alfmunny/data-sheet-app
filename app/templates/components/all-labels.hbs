@@ -1,0 +1,15 @@
+{{#if isSorted}}
+  {{#each sortedContent}}
+  <li class="list-group-item">
+    {{this.id}}
+    <span class="label label-success pull-right">{{this.repeat}}</span>
+  </li>
+  {{/each}}
+{{else}}
+  {{#each allLetters}}
+  <li class="list-group-item">
+    {{this.id}}
+    <span class="label label-success pull-right">{{this.repeat}}</span>
+  </li>
+  {{/each}}
+{{/if}}
