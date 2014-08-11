@@ -2,10 +2,10 @@ html, body {
   margin: 20px;
 }
 
-#homepage {
+/*#homepage {
   border-style: groove;
   background-color: #d4d3ce;
-}
+}*/
 
 .active {
   font-weight: bold;
