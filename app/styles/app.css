@@ -1,7 +1,11 @@
-html, body {
+html, body{
   margin: 20px;
 }
 
+.my-menu {
+	margin-top: 30px;	
+	width: 20% !important;
+}
 /*#homepage {
   border-style: groove;
   background-color: #d4d3ce;

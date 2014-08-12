@@ -14,12 +14,18 @@
             <div class="panel-body">
               {{#view 'select-item'}}
                 {{#each}}
-                    {{#link-to 'wacomwriter' this}}
-                      <li class="list-group-item">
+                <div class="row list-group">
+                  <div class="col-md-1">
+                    {{input type="checkbox" name="Admin" checked=Admin class="checkbox"}}
+                  </div>
+                  <div class="col-md-10">
+                    {{#link-to 'wacomwriter' this class="list-group-item"}}
                         {{id}}
                         <span id="pointer"></span>
-                      </li>
+                        <span></span>
                     {{/link-to}}
+                  </div>
+                </div>
                 {{/each}}
               {{/view}}
             </div>

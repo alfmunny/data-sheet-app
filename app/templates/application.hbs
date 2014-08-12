@@ -1,8 +1,33 @@
+<nav id="my-menu" class="my-menu">
+   <ul>
+      <li>
+      	<a href="#">Home</a>
+      	<input type="checkbox" class="Toggle" />
+      </li>
+      <li>
+         <a href="#">About us</a>
+         <ul>
+            <li><a href="#">History</a></li>
+            <li><a href="#">The team</a></li>
+            <li><a href="#">Our address</a></li>
+         </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+   </ul>
+</nav>
+
 <ul class="nav nav-pills">
   <li><a href="#">About VibeData</a></li>
   <li>{{#link-to 'wacom'}}Wacom{{/link-to}}</li>
   <li>{{#link-to 'tablet'}}Tablet{{/link-to}}</li>
   <li>{{#link-to 'pressure'}}Pressure{{/link-to}}</li>
+	<li class="pull-right">
+		<a href="#my-menu">
+		<button class="btn btn-default">
+			<span class="glyphicon glyphicon-wrench"></span>
+		</button>
+	</a>
+	</li>
 </ul>
 <br>
 {{outlet}}

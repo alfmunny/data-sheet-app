@@ -14,6 +14,10 @@ var WriterController = Ember.ObjectController.extend({
   actions: {
     sort: function () {
       this.toggleProperty('isSorted', true);
+    },
+
+    extract: function() {
+      
     }
   }
 });
