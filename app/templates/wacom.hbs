@@ -13,10 +13,11 @@
           <div id="collapse-writer-list" class="panel-collapse collapse in">
             <div class="panel-body">
               {{#view 'select-item'}}
-                {{#each}}
                 <div class="row list-group">
+                {{#each}}
+                <div class="item">
                   <div class="col-md-1">
-                    {{input type="checkbox" name="Admin" checked=Admin class="checkbox"}}
+                    {{input type="checkbox" name="writer" class="checkbox"}}
                   </div>
                   <div class="col-md-10">
                     {{#link-to 'wacomwriter' this class="list-group-item"}}
@@ -27,6 +28,7 @@
                   </div>
                 </div>
                 {{/each}}
+              </div>
               {{/view}}
             </div>
           </div>

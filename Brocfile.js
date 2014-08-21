@@ -12,6 +12,9 @@ app.import('vendor/fonts/glyphicons-halflings-regular.woff');
 app.import('vendor/jquery-knob/js/jquery.knob.js');
 app.import('vendor/jQuery.mmenu/src/js/jquery.mmenu.min.all.js');
 app.import('vendor/jQuery.mmenu/src/css/jquery.mmenu.all.css');
+
+app.import('vendor/file-saver/FileSaver.js');
+
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
