@@ -13,14 +13,21 @@
           <div id="collapse-writer-list" class="panel-collapse collapse in">
             <div class="panel-body">
               {{#view 'select-item'}}
-                {{#each}}
-                    {{#link-to 'tabletwriter' this}}
-                      <li class="list-group-item">
-                        {{id}}
-                        <span id="pointer"></span>
-                      </li>
-                    {{/link-to}}
-                {{/each}}
+                <div class="row list-group">
+                  {{#each}}
+                    <div class="item">
+                      <div class="col-md-1">
+                        {{input type="checkbox" name="writer" class="checkbox"}}
+                      </div>
+                      <div class="col-md-10">
+                        {{#link-to 'tabletwriter' this class="list-group-item" }}
+                          {{id}}
+                          <span id="pointer"></span>
+                        {{/link-to}}
+                      </div>
+                    </div>
+                  {{/each}}
+                </div>
               {{/view}}
             </div>
           </div>

@@ -3,7 +3,6 @@ export default Ember.ObjectController.extend({
   actions: {
     downloadFile: function () {
       var writers = $('input[name="writer"]:checked');
-      console.log(writers.length);
       var nameList = [];
       var allFiles = [];
       $(writers).each(function () {
@@ -31,9 +30,12 @@ export default Ember.ObjectController.extend({
       });
       var allFilesString = allFiles.join("\n");
       var allFilesStringArray = [allFilesString];
-      //console.log(allFilesString);
-      var blob = new Blob(allFilesStringArray, {type: "text/csv;charset=utf-8"});
-      saveAs(blob, "vibewirte-file-list.csv");
+      if(allFilesString =="") {
+        alert("Nothing to download.\nPlease select at least one writer's name.");
+      } else {
+        var blob = new Blob(allFilesStringArray, {type: "text/csv;charset=utf-8"});
+        saveAs(blob, "vibewirte-file-list.csv");
+      }
     }
   }
 });

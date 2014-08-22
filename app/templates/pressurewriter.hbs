@@ -9,28 +9,24 @@
         {{#if 'isSorted'}}
           {{#view 'select-item'}}
             {{#each sortedContent}}
-              {{#link-to 'pressurelabel' this}}
-                <li class="list-group-item">
-                  {{id}}
-                  <span id="pointer" class="pull-right"></span>
-                  <span class="label label-success pull-right">
+              {{#link-to 'pressurelabel' this class="list-group-item" }}
+                {{id}}
+                <span id="pointer" class="pull-right"></span>
+                <span class="label label-success pull-right">
                     {{repeat}}
                   </span>
-                </li>
               {{/link-to}}
             {{/each}}
           {{/view}}
         {{else}}
           {{#view 'select-item'}}
             {{#each labels}}
-              {{#link-to 'pressurelabel' this}}
-                <li class="list-group-item">
-                  {{id}}
-                  <span id="pointer" class="pull-right"></span>
-                  <span class="label label-success pull-right">
+              {{#link-to 'pressurelabel' this class="list-group-item" }}
+                {{id}}
+                <span id="pointer" class="pull-right"></span>
+                <span class="label label-success pull-right">
                     {{repeat}}
                   </span>
-                </li>
               {{/link-to}}
             {{/each}}
           {{/view}}

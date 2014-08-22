@@ -3,7 +3,7 @@ html, body{
 }
 
 .my-menu {
-	margin-top: 30px;	
+	margin-top: 30px;
 	width: 20% !important;
 }
 /*#homepage {
@@ -14,10 +14,6 @@ html, body{
 .active {
   font-weight: bold;
   font-family: helvetica;
-}
-
-li .active {
-  background-color: #c0c0c0;
 }
 
 .pointer {

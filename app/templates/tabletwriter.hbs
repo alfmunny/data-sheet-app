@@ -22,13 +22,12 @@
         {{else}}
           {{#view 'select-item'}}
             {{#each labels}}
-              {{#link-to 'tabletlabel' this}}
-                <li class="list-group-item">
+              {{#link-to 'tabletlabel' this class="list-group-item"}}
                   {{id}}
+                  <span id="pointer" class="pull-right"></span>
                   <span class="label label-success pull-right">
                     {{repeat}}
                   </span>
-                </li>
               {{/link-to}}
             {{/each}}
           {{/view}}

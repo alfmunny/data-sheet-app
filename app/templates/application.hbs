@@ -1,4 +1,4 @@
-<nav id="my-menu" class="my-menu">
+<!-- <nav id="my-menu" class="my-menu">
    <ul>
       <li>
       	<a href="#">Home</a>
@@ -14,27 +14,29 @@
       </li>
       <li><a href="#">Contact</a></li>
    </ul>
+</nav> -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand"href="#">VibeData</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>{{#link-to 'wacom'}}Wacom{{/link-to}}</li>
+      <li>{{#link-to 'tablet'}}Tablet{{/link-to}}</li>
+      <li>{{#link-to 'pressure'}}Pressure{{/link-to}}</li>
+    </ul>
+    <ul class="nav navbar-form navbar-right">
+        <button type="button" class="btn btn-default btn-sm" {{action 'downloadFile'}}>
+          <span class="glyphicon glyphicon-download-alt"></span>
+        </button>
+    </ul>
 </nav>
-
-<ul class="nav nav-pills">
-  <li><a href="#">About VibeData</a></li>
-  <li>{{#link-to 'wacom'}}Wacom{{/link-to}}</li>
-  <li>{{#link-to 'tablet'}}Tablet{{/link-to}}</li>
-  <li>{{#link-to 'pressure'}}Pressure{{/link-to}}</li>
-	<li class="pull-right">
+	<!-- <li class="pull-right">
 		<a href="#my-menu">
 		<button class="btn btn-default">
 			<span class="glyphicon glyphicon-wrench"></span>
 		</button>
 	</a>
-	</li>
-  <li class="pull-right">
-    <a id="downloadButton">
-      <button class="btn btn-default" {{action 'downloadFile'}}>
-        <span class="glyphicon glyphicon-download-alt"></span>
-      </button>
-    </a>
-  </li>
-</ul>
+	</li> -->
 <br>
 {{outlet}}
