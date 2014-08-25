@@ -36,6 +36,14 @@ export default Ember.ArrayController.extend({
   actions: {
     sort: function () {
       this.toggleProperty('isSorted', true);
+    },
+    checkAll: function() {
+          $('#collapse-writer-list').checkboxes('check');
+          e.preventDefault();
+      // $('#wacom-check-all').on('click', function (e) {
+      //   $('#collapse-writer-list').checkboxes('check');
+      //   e.preventDefault();
+      // });
     }
   }
 

@@ -12,6 +12,7 @@ app.import('vendor/fonts/glyphicons-halflings-regular.woff');
 app.import('vendor/jquery-knob/js/jquery.knob.js');
 app.import('vendor/jQuery.mmenu/src/js/jquery.mmenu.min.all.js');
 app.import('vendor/jQuery.mmenu/src/css/jquery.mmenu.all.css');
+app.import('vendor/checkboxes.js/dist/jquery.checkboxes-1.0.5.min.js');
 
 app.import('vendor/file-saver/FileSaver.js');
 

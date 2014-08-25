@@ -15,9 +15,12 @@ var WriterController = Ember.ObjectController.extend({
     sort: function () {
       this.toggleProperty('isSorted', true);
     },
-
-    extract: function() {
-      
+    checkAll: function() {
+      console.log('here');
+      // $('#wacom-check-all').on('click', function (e) {
+      //   $('#collapse-writer-list').checkboxes('check');
+      //   e.preventDefault();
+      // });
     }
   }
 });
