@@ -22,6 +22,26 @@ export default Ember.ArrayController.extend({
     return letters;
   }.property('model'),
 
+  letterIds: function () {
+    var allLetters = this.get('sortedContent');
+    var letterIds = [];
+
+    for (var i = 0; i < allLetters.length; i++) {
+      letterIds.push(allLetters[i]['id']);
+    }
+    return letterIds;
+  }.property('sortedContent'),
+
+  letterRepeats: function () {
+    var allLetters = this.get('sortedContent');
+    var letterRepeats = [];
+
+    for (var i = 0; i < allLetters.length; i++) {
+      letterRepeats.push(allLetters[i]['repeat']);
+    }
+    return letterRepeats;
+  }.property('sortedContent'),
+
   sortedContent: function () {
       var labels = this.get('allLetters');
       var labelsController = Ember.ArrayController.create({
@@ -44,7 +64,11 @@ export default Ember.ArrayController.extend({
       //   $('#collapse-writer-list').checkboxes('check');
       //   e.preventDefault();
       // });
+    },
+    print: function () {
+
     }
+
   }
 
 });
